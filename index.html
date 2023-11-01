@@ -5,66 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Macon Music & Arts</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="script.js"></script>
 
-
+    
     <body class="bg-warning">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Macon Music & Arts Festival</a>
         <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="index.html" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="events.html" href="#">Events</a>
-            </li>
-            <!-- Add more navigation items as needed -->
-          </ul>
-        </div>
-      </nav>
-  
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-column" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+
+            <a href="index.html"><button>Home</button></a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html"><button>About</button></a>
+          </li>
+          <li class="nav-item">
+            <a href="events.html"><button>Events</button></a>
+          </li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+      
+
+    </nav>
+    
   </head>
   <body class="bg-warning">
     <div class="row">
       <div class="col-sm-2"></div>
-    <div class="card text-bg-success mb-3" style="width: 18rem;">
-      <img src="images/banjoplayer.jpg" class="card-img" alt="Cloverfield Cadence">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Cloverfield Cadence</h5>
-        <p class="card-text">Live at Dillon Park in Woodbury at 6pm on Friday 10/27/23.</p>
-        <a href="events.html" class="btn btn-light">Get Tickets!</a>
+      <div class="card text-bg-success mb-3" style="width: 18rem;">
+        <img src="images/banjoplayer.jpg" class="card-img" alt="Cloverfield Cadence">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Cloverfield Cadence</h5>
+          <p class="card-text">Live at Dillon Park in Woodbury at 6pm on Friday 10/27/23.</p>
+          <a href="events.html" class="btn btn-light">Get Tickets!</a>
+        </div>
       </div>
-    </div>
-    <div class="card text-bg-success mb-3" style="width: 18rem;">
-      <img src="images/oldmanbanjo.jpg" class="card-img-top" alt="Meadowlark Melodies">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Meadowlark Melodies</h5>
-        <p class="card-text">Playing his banjo favorites, Friday 11/3/2023</p>
-        <a href="events.html" class="btn btn-light">Get Tickets!</a>
+      <div class="card text-bg-success mb-3" style="width: 18rem;">
+        <img src="images/oldmanbanjo.jpg" class="card-img-top" alt="Meadowlark Melodies">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Meadowlark Melodies</h5>
+          <p class="card-text">Playing his banjo favorites, Friday 11/3/2023</p>
+          <a href="events.html" class="btn btn-light">Get Tickets!</a>
+        </div>
       </div>
-    </div>
-    <div class="card text-bg-success mb-3" style="width: 18rem;">
-      <img src="images/countrygirl.jpg" class="card-img-top" alt="Whimsy Wood Ramblers">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Whimsy Wood Ramblers</h5>
-        <p class="card-text">Featuring Shelly Jones and their whimsical country style - 11/10/2023</p>
-        <a href="events.html" class="btn btn-light">Get Tickets!</a>
+      <div class="card text-bg-success mb-3" style="width: 18rem;">
+        <img src="images/countrygirl.jpg" class="card-img-top" alt="Whimsy Wood Ramblers">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Whimsy Wood Ramblers</h5>
+          <p class="card-text">Featuring Shelly Jones and their whimsical country style - 11/10/2023</p>
+          <a href="events.html" class="btn btn-light">Get Tickets!</a>
+          
+        </div>
       </div>
-    </div>
-    
-  </body>
-</html>
+      
+      <div id="countdown">
+      <span id="days">0</span> Days
+        <span id="hours">0</span> Hours
+        <span id="minutes">0</span> Minutes
+        <span id="seconds">0</span> Seconds
+      
+      </div>
+    </body>
+    </html>
