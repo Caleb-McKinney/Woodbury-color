@@ -1,40 +1,20 @@
 'use strict';
 
+let deadline = new Date("Dec 31, 2023 19:00:00").getTime();
 
-const event = {
-  eventName: "Macon Music & Arts",
-  eventDate: new Date("2023-10-27T18:00:00"),
-};
-const countdown = document.getElementById("countdown");
-const daysSpan = document.getElementById("days");
-const hoursSpan = document.getElementById("hours");
-const minutesSpan = document.getElementById("minutes");
-const secondsSpan = document.getElementById("seconds");
+let now = new Date().getTime();
+let t = deadline - now;
+let days = Math.floor(t/(1000*60*60*24));
+let hours = Math.floor((t%(1000*60*60**24))/(1000*60*60));
+let minutes = Math.floor((t%(1000*60*60))/(1000*60));
+let seconds = Math.floor((t%(1000*60))/1000);
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const eventTime = event.eventDate.getTime();
-  const timeRemaining = eventTime - now;
+document.getElementById('demo').innerHTML = days + "d" + hours+ "h "+minutes+"m" + seconds + "s";
 
-  if (timeRemaining <= 0) {
-    countdown.innerHTML = "Event Started!";
-    clearInterval(countdownInterval);
-    return;
-  }
-
-  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-  daysSpan.innerHTML = days;
-  hoursSpan.innerHTML = hours;
-  minutesSpan.innerHTML = minutes;
-  secondsSpan.innerHTML = seconds;
+if 
+(t<0){
+  clearInterval(x);
+  document.getElementById("demo").innerHTML = "EXPIRED";
 }
 
-// Initial call to populate countdown
-updateCountdown();
-
-// Update the countdown every second
-const countdownInterval = setInterval(updateCountdown, 1000);
+console.log(days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
