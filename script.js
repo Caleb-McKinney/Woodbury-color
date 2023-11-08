@@ -18,3 +18,15 @@ if
 }
 
 console.log(days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
+
+function validateEmails() {
+  var email1 = document.getElementById("email").value;
+  var email2 = document.getElementById("confirmEmail").value;
+  var errorDiv = document.getElementById("emailError");
+
+  if (email1 !== email2) {
+    errorDiv.textContent = "Emails do not match.";
+  } else {
+    errorDiv.textContent = ""; // 
+  }
+}

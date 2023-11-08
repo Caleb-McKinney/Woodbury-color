@@ -48,21 +48,40 @@
         <h2>Cloverfield Cadence Live</h2>
         <p>Join us for an unforgettable musical and artistic experience at Dillon Park in Woodbury on October 27, 2023, at 6:00 PM.</p>
         <div class="card text-bg-success mt-4">
-            <div class="card-header">
-                Event Details
+          <div class="card-header">
+            Event Details
             </div>
             <div class="card-body">
                 <h5 class="card-title">Event Information</h5>
                 <p class="card-text"><strong>Date:</strong> Friday, October 27, 2023</p>
                 <p class="card-text"><strong>Time:</strong> 6:00 PM</p>
                 <p class="card-text"><strong>Location:</strong> Dillon Park, Woodbury</p>
+              </div>
             </div>
-        </div>
-        <div class="card text-bg-success mt-4">
-            <div class="card-header">
+            
+                     <div class="card text-bg-success mt-4"> 
+                        <div class="card-header">
+                          User Information
+                        </div>
+                        <div class="card-body">
+                          <form id="userInfoForm">
+                            <label for="fname">Full name:</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                            <label for="email">Enter your email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <label for="confirmEmail">Confirm Email:</label><br>
+                            <input type="email" id="confirmEmail" name="confirmEmail"><br>
+                            <div id="emailError" style="color: red;"></div> <!-- Error message placeholder -->
+                            <button type="button" onclick="validateEmails()">Submit</button> <!-- Add a submit button -->
+                          </form>
+                        </div>              
+                      </div>
+                     
+            <div class="card text-bg-success mt-4">
+              <div class="card-header">
                 Ticket Purchase
-            </div>
-            <div class="card-body">
+              </div>
+              <div class="card-body">
                 <form id="ticketPurchaseForm">
                     <div class="form-group">
                         <label for="ticketType">Ticket Type</label>
@@ -74,12 +93,11 @@
                     <div class="form-group">
                         <label for="quantity">Quantity</label>
                         <input type="number" class="form-control" id="quantity" placeholder="Enter quantity">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Purchase Tickets</button>
-                </form>
+                      </div>
+                      <button type="submit" class="btn btn-warning">Purchase Tickets</button>
+                    </form>
             </div>
         </div>
-        
         <script>
             document.getElementById("ticketPurchaseForm").addEventListener("submit", function(event) {
                 event.preventDefault(); // Prevent the form from submitting
